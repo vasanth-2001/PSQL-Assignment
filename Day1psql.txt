@@ -1,0 +1,38 @@
+ 
+(>,<,<=,>=,!=,=)
+ select * from customer;
+ select * from customer where address_id > 20;
+ select * from customer where address_id < 40;
+ select * from customer where address_id <= 20;
+ select * from customer where address_id >= 40;
+ select * from customer where address_id != 34;
+ select * from customer where address_id = 30;
+
+(AND,OR,NOT,IN,NOT IN,BETWEEN,NOT BETWEEN,LIKE,NOTLIKE)
+ select * from film where rental_rate=4.99 and rating='G';
+ select * from film where rental_rate=4.99 or rating='G';
+ select * from film where not rating='PG-13';
+ select * from film where rental_duration in (5,6,7);
+ select * from film where rental_duration not in (5,6,7);
+ select * from film where length between 150 and 170;
+ select * from film where length not between 150 and 170;
+ select * from film where title like 'Noon%';
+ select * from film where title like '%inal%';
+ select * from film where title like '%Date';
+ select * from film where title like '_l%';
+ select * from film where title like '%_m';
+ select * from film where title like '%s_';
+ select * from film where title not like 'Spice%';
+ select * from film where title not like '%inal%';
+ select * from film where title not like '%ky';
+ select * from film where title not like '_s%';
+ select * from film where title not like 'a_s';
+ select * from film where title not like '%a_';
+
+(IS NULL,IS NOT NULL)
+ select * from actor where actor_id is null;
+ select * from actor where actor_id is not null;
+
+(LIMIT,OFFSET)
+ select * from city limit 10;
+ select * from city limit 10 offset 4;
